@@ -10,7 +10,7 @@ The code should work on any platform.
 
 ## Data format
 
-Routines are provided to read in corpora in two formats: a simple format where each token is individually encoded, and a sparse format.  Both formats expect a text file which has one line for each document in the corpus.  One-based indexing is always used, since Julia indexes arrays this way.  In the simple, non-sparse format (readData.jl), each word in the document is represented by a word index, and these are space separated.  The words and documents should ideally be shuffled, to improve the performance of the stochastic algorithm.
+Routines are provided to read in corpora in two formats: a simple format where each token is individually encoded, and a sparse format.  Both formats involve a text file which has one line for each document in the corpus.  One-based indexing is always used, since Julia indexes arrays this way.  In the simple, non-sparse format (readData.jl), each word in the document is represented by a word index, and these are space separated.  The words and documents should ideally be shuffled, to improve the performance of the stochastic algorithm.
 
 In the sparse format (readSparseData.jl), there is an entry for each distinct word type appearing in a document.  These are encoded by pairs of token index and token count.  All values are space separated, and a newline once again signifies the end of a document.  For reporting the top words in a corpus, a dictionary file is also expected, containing one line per word type in plain text.
 
